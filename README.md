@@ -176,6 +176,15 @@ The marketplace should focus on repeat purchase strategies such as loyalty progr
 
 Payment methods were analyzed by transaction count and total payment value.
 
+```text
+SELECT	
+	count(order_id) as order_count,
+	payment_type
+from order_payments
+group by payment_type
+order by order_count desc;
+```
+
 Key finding:
 
 Credit card was the dominant payment method.
